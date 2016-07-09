@@ -50,17 +50,7 @@ sudo pacman -S ristretto --noconfirm
 
 sudo pacman -S notify-osd --noconfirm
 
-sudo pacman -S xfce4-screenshooter --noconfirm
-
-sudo pacman -S xfce4-appfinder --noconfirm
-
-suod pacman -S xfce4-power-manager --noconfirm
-
 sudo pacman -S evince --noconfirm
-
-# if you need to edit which extension goes with which program
-# sudo pacman -S mime-editor
-
 
 
 ######## D E V E L O P M E N T #########
@@ -78,7 +68,7 @@ sudo pacman -S inkscape --noconfirm
 
 sudo pacman -S firefox --noconfirm
 sudo pacman -S flashplugin --noconfirm
-sudo pacman -S transmission  --noconfirm
+sudo pacman -S transmission-gtk  --noconfirm
 sudo pacman -S filezilla --noconfirm
 
 # activate multilib in the pacman.conf
@@ -104,7 +94,7 @@ sudo pacman -S geary --noconfirm
 
 # Theme, icons, borders, cursors
 
-sudo pacman -S oxygen-cursors --noconfirm
+
 
 
 ######## S Y S T E M           #########
@@ -113,24 +103,37 @@ sudo pacman -S oxygen-cursors --noconfirm
 
 # all kind of tools to get system information
 
-sudo pacman -S scrot
- screenfetch
- git --noconfirm
- htop --noconfirm
-wget  --noconfirm
-lm_sensors  --noconfirm
-sysstat  --noconfirm
-glances  --noconfirm
+sudo pacman -S scrot --noconfirm
+
+sudo pacman -S screenfetch --noconfirm
+
+sudo pacman -S git --noconfirm
+
+sudo pacman -S htop --noconfirm
+
+sudo pacman -S wget  --noconfirm
+
+sudo pacman -S sysstat  --noconfirm
+
+sudo pacman -S glances  --noconfirm
+
 sudo pacman -S numlockx --noconfirm
- inxi  --noconfirm
-dmidecode  --noconfirm
-hddtemp  --noconfirm
-mesa-demos  --noconfirm
-net-tools  --noconfirm
-archey3  --noconfirm
-mlocate  --noconfirm
-hardinfo --noconfirm
+
+sudo pacman -S inxi  --noconfirm
+
+#sudo pacman -S mesa-demos  --noconfirm
+
+sudo pacman -S net-tools  --noconfirm
+
+sudo pacman -S archey3  --noconfirm
+
+#updatedb and locate
+sudo pacman -S mlocate  --noconfirm
+
+sudo pacman -S hardinfo --noconfirm
+
 numlockx on 
+
 
 # monitor the GB/TB of your harddisk
 
@@ -145,9 +148,6 @@ sudo pacman -S vnstat  --noconfirm
 systemctl enable vnstat
 systemctl start vnstat
 
-# taskmanager if htop and glances is not for you
-
-sudo pacman -S xfce4-taskmanager --noconfirm
 
 
         # S O U N D #
@@ -161,26 +161,29 @@ sudo pacman -S gst-plugins-good gst-plugins-bad gst-plugins-base gst-plugins-ugl
 #sudo pacman -S volumeicon --noconfirm
 
 
-        # T H U N A R #
+        # A R C H I V E #
 
-sudo pacman -S thunar file-roller tumbler thunar-archive-plugin thunar-volman
+sudo pacman -S file-roller  --noconfirm
 
 # if you want  a wastbasket in thunar you better install this
-# or thunar-vfs
+
 sudo pacman -S gvfs   --noconfirm
 
-# installed via brasero
-# sudo pacman -S gvfs --noconfirm
 
 # better search with catfish and dependancies - in depth string search
-sudo pacman -S catfish findutils mlocate tracker strigi pinot --noconfirm
+sudo pacman -S catfish --noconfirm
+
+#sudo pacman -S findutils tracker strigi pinot --noconfirm
 
 
         # F O N T S #
-#sudo pacman -S ttf-ubuntu-font-family --noconfirm
+
+sudo pacman -S ttf-ubuntu-font-family --noconfirm
+
+
 #sudo pacman -S ttf-droid --noconfirm --noconfirm
 #sudo pacman -S ttf-inconsolata --noconfirm
-sudo pacman -S ttf-google-fonts  --noconfirm
+#sudo pacman -S ttf-google-fonts  --noconfirm
 
         # U T I L I T I E S #
 
@@ -188,7 +191,7 @@ sudo pacman -S gnome-disk-utility  --noconfirm
 
         # P R I N T E R #
 
-sudo pacman -S cups cups-pdf ghostscript gsfonts libcups hplip system-config-printer
+sudo pacman -S cups cups-pdf ghostscript gsfonts libcups hplip system-config-printer --noconfirm
 systemctl enable org.cups.cupsd.service
 systemctl start org.cups.cupsd.service
 
@@ -200,7 +203,7 @@ systemctl start org.cups.cupsd.service
 
 sudo pacman -S networkmanager --noconfirm
 
-# set nm-applet to run at boot in the config file
+
 
 
 
