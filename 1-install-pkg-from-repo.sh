@@ -52,6 +52,7 @@ sudo pacman -S notify-osd --noconfirm
 
 sudo pacman -S evince --noconfirm
 
+sudo pacman -S variety --noconfirm
 
 ######## D E V E L O P M E N T #########
 
@@ -178,7 +179,7 @@ sudo pacman -S catfish --noconfirm
 
         # F O N T S #
 
-sudo pacman -S ttf-ubuntu-font-family --noconfirm
+#sudo pacman -S ttf-ubuntu-font-family --noconfirm
 
 
 #sudo pacman -S ttf-droid --noconfirm --noconfirm
