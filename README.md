@@ -170,6 +170,9 @@ change your keyboard to belgian in the settings
 
 # Fase 5 Getting our software
 
+export EDITOR=nano
+
+
 sudo pacman -S firefox
 
 Surf to https://github.com/erikdubois/ArchXfce4
@@ -193,6 +196,15 @@ Go inside the folder and run every program in there
 ./1 and press tab etcetera
 
 
+./2 ...
+
+
+./3 ...
+
+run forest run
+
+
+again this is personal ssssshhhh
 
 
 
@@ -204,27 +216,3 @@ Go inside the folder and run every program in there
 
 
 
-
-
-export EDITOR=nano
-
-sudo nano /etc/pacman.conf
-
-	[multilib]
-	Include = /etc/pacman.d/mirrorlist
-
-	[archlinuxfr]
-	SigLevel = Never
-	Server = http://repo.archlinux.fr/$arch
-
-	sudo pacman -Syu
-	sudo pacman -S yaourt
-	yaourt packer      
-	sudo nano /etc/pacman.conf
-
-	#[archlinuxfr]
-	#SigLevel = Never
-	#Server = http://repo.archlinux.fr/$arch
-
-
-via script
