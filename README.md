@@ -45,14 +45,19 @@ uncomment these lines
 	en_GB.UTF8
 	en_US.UTF8
 
+CTRL + X , yes, enter
+
 locale-gen
 
 	echo LANG=en_US.UTF-8 > /etc/locale.conf
 	export LANG=en_US.UTF-8
 
 nano /etc/vconsole.conf
+
 	KEYMAP=be-latin1
 	FONT=lat9w-16
+
+CTRL + X , yes, enter
 
 ln -s /usr/share/zoneinfo/Europe/Brussels /etc/localtime
 
@@ -61,8 +66,10 @@ hwclock --systohc --utc
 echo ArchErik > /etc/hostname
 
 nano /etc/hosts
-	#<ip-address> <hostname.domain.org> <hostname>
-	127.0.0.1 localhost.localdomain localhost ArchErik
+
+
+	<ip-address> <hostname.domain.org> <hostname>
+	127.0.0.1 localhost.localdomain localhost <b>ArchErik</b>
 	::1   localhost.localdomain localhost ArchErik
 	touch /etc/udev/rules.d/80-net-setup-link.rules
 
