@@ -159,7 +159,8 @@ easy switching between desktop environments and login
 
 sudo pacman -S gdm
 
-
+systemctl enable gdm.service
+systemctl start gdm.service
 
 
 
