@@ -28,10 +28,6 @@ swapon /dev/sda2
 
 mount /dev/sda1 /mnt
 
-mkdir /mnt/home
-
-mount /dev/sda2 /mnt/home
-
 pacman -Sy
 
 
