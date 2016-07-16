@@ -213,6 +213,11 @@ playerctl previous
 
 playerctl stop
 
+
+printscreen
+
+scrot -e ~/Pictures/capt-$(date '+%Y-%m-%d-%H%M%S').png
+
 again this is personal ssssshhhh
 
 
