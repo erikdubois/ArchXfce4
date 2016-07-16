@@ -188,6 +188,9 @@ sudo pacman -S git
 git clone https://github.com/erikdubois/ArchXfce4
 
 
+Go inside the folder and run every program in there
+
+./1 and press tab etcetera
 
 
 
