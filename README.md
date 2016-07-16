@@ -111,7 +111,15 @@ useradd -m -g users -G wheel,storage,power -s /bin/bash erik
 passwd erik
 
 EDITOR=nano visudo
-	# %wheel ALL=(ALL) ALL
+
+Look for these lines with an hashtag in front
+	
+	 %wheel ALL=(ALL) ALL
+
+hashtag (#) should be gone
+
+CTRL = X , yes and enter
+
 
 pacman -S bash-completion
 
@@ -124,6 +132,9 @@ exit
 
 
 # FASE 3 erik
+
+Login with new account i.e. here erik and password
+
 
 export EDITOR=nano
 
