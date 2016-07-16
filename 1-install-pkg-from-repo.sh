@@ -54,6 +54,8 @@ sudo pacman -S evince --noconfirm
 
 sudo pacman -S variety --noconfirm
 
+sudo pacman -S meld --noconfirm
+
 ######## D E V E L O P M E N T #########
 
 ######## E D U C A T I O N     #########
@@ -87,6 +89,7 @@ sudo pacman -S shotwell --noconfirm
 ######## O F F I C E           #########
 
 sudo pacman -S geary --noconfirm
+
 
 
 ######## S E T T I N G S       #########
