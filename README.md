@@ -139,7 +139,7 @@ Login with new account i.e. here erik and password
 
 
 sudo pacman -S xorg-server xorg-server-utils xorg-xinit xorg-twm xterm
-startx
+
 
 sudo pacman -S xf86-video-nouveau
 
@@ -147,7 +147,7 @@ sudo pacman -S xf86-video-nouveau
 
 
 
-# FASE 4 Destkop environment
+# FASE 4 Desktop environment
 
 
 sudo pacman -S xfce4 xfce4-goodies xfce4-whiskermenu-plugin
