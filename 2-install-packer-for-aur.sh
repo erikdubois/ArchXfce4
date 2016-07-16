@@ -49,6 +49,9 @@
 # normally not needed
 # sudo pacman -S base-devel fakeroot jshon expac git wget --noconfirm
 
+#depends for packer
+
+sudo pacman -S grep sed bash curl pacman jshon expac
 
 rm -rf /tmp/packer
 
