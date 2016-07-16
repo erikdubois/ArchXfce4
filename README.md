@@ -39,6 +39,12 @@ arch-chroot /mnt /bin/bash
 
 nano /etc/locale.gen
 
+uncomment these lines
+
+	be_BY.UTF8
+	en_GB.UTF8
+	en_US.UTF8
+
 locale-gen
 
 	echo LANG=en_US.UTF-8 > /etc/locale.conf
