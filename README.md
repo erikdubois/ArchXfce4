@@ -133,6 +133,7 @@ exit
 
 # FASE 3 erik
 
+
 Login with new account i.e. here erik and password
 
 
@@ -140,19 +141,21 @@ export EDITOR=nano
 
 sudo nano /etc/pacman.conf
 
-[multilib]
-Include = /etc/pacman.d/mirrorlist
-[archlinuxfr]
-SigLevel = Never
-Server = http://repo.archlinux.fr/$arch
-sudo pacman -Syu
-sudo pacman -S yaourt
-yaourt packer      
-sudo nano /etc/pacman.conf
+	[multilib]
+	Include = /etc/pacman.d/mirrorlist
 
-#[archlinuxfr]
-#SigLevel = Never
-#Server = http://repo.archlinux.fr/$arch
+	[archlinuxfr]
+	SigLevel = Never
+	Server = http://repo.archlinux.fr/$arch
+
+	sudo pacman -Syu
+	sudo pacman -S yaourt
+	yaourt packer      
+	sudo nano /etc/pacman.conf
+
+	#[archlinuxfr]
+	#SigLevel = Never
+	#Server = http://repo.archlinux.fr/$arch
 
 
 via script
