@@ -153,6 +153,11 @@ sudo pacman -S xf86-video-nouveau
 sudo pacman -S xfce4 xfce4-goodies xfce4-whiskermenu-plugin
 
 
+# FASE 5 Display manager
+
+easy switching between desktop environments and login
+
+sudo pacman -S gdm
 
 
 
