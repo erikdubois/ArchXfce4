@@ -172,6 +172,7 @@ echo "xcursor-menda-git"
 echo "################################################################"
 
 packer xcursor-menda-git --noedit
+packer xcursor-breeze --noedit
 
 #packer xcursor-simpleandsoft --noedit
 
