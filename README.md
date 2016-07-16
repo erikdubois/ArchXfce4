@@ -69,7 +69,7 @@ nano /etc/hosts
 
 
 	<ip-address> <hostname.domain.org> <hostname>
-	127.0.0.1 localhost.localdomain localhost <b>ArchErik</b>
+	127.0.0.1 localhost.localdomain localhost ArchErik
 	::1   localhost.localdomain localhost ArchErik
 	touch /etc/udev/rules.d/80-net-setup-link.rules
 
@@ -87,9 +87,9 @@ grub-install --target=i386-pc --recheck /dev/sda
 
 grub-mkconfig -o /boot/grub/grub.cfg
 
-umount /dev/sda2
-
 umount /dev/sda1
+
+exit
 
 reboot
 
@@ -100,6 +100,11 @@ reboot
 
 
 #FASE 2 root
+
+login with root
+and use the password
+
+make new account
 
 useradd -m -g users -G wheel,storage,power -s /bin/bash erik
 
