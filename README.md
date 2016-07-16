@@ -164,11 +164,28 @@ systemctl enable gdm.service
 systemctl start gdm.service
 
 
+change your keyboard to belgian in the settings
 
 
 
+# Fase 5 Getting our software
 
+sudo pacman -S firefox
 
+Surf to https://github.com/erikdubois/ArchXfce4
+
+If you download the zip
+
+	
+sudo pacman -S file-roller
+
+Download and right mouse click to extract
+
+If you work with git
+
+sudo pacman -S git
+
+git clone https://github.com/erikdubois/ArchXfce4
 
 
 
