@@ -203,6 +203,15 @@ Go inside the folder and run every program in there
 
 run forest run
 
+Keyboard shortcuts to stop music and skip to next can be done with
+
+playerctl play-pause
+
+playerctl next
+
+playerctl previous
+
+playerctl stop
 
 again this is personal ssssshhhh
 
