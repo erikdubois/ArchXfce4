@@ -36,8 +36,8 @@
 
 wget http://gdlp01.c-wss.com/gds/0/0100006900/01/cnijfilter2-source-5.20-1.tar.gz -O /tmp/cnijfilter2-source-5.20-1.tar.gz
 
-
-tar -zxvf /tmp/cnijfilter2-source-5.20-1.tar.gz
+cd /tmp
+tar -zxvf /tmp/cnijfilter2-source-5.20-1.tar.gz -C /tmp
 cd /tmp/cnijfilter2-source-5.20-1/cnijbe2
 ./autogen.sh
 make 
