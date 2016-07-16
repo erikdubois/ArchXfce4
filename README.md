@@ -35,10 +35,6 @@ pacstrap -i /mnt base base-devel
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
-nano /mnt/etc/fstab
-
-defaults,noatime,discard 
-
 arch-chroot /mnt /bin/bash
 
 nano /etc/locale.gen
