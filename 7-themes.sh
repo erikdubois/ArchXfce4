@@ -26,10 +26,12 @@
 # Installation of zsh and oh-my-zsh
 
 echo "################################################################"
-echo "installing sardi"
+echo "installing arc dark"
 echo "################################################################"
 
-packer sardi --noedit
+packer gtk-theme-arc-git --noedit
+
+packer gtk-theme-arc-grey-git --noedit
 
 
 #zsh enhancements
@@ -40,18 +42,6 @@ echo "################################################################"
 
 packer super ultra flat numix remix --noedit
 
-
-# Installation of OH-MY-ZSH from the github (best way to install!!)
-
-echo "################################################################"
-echo "installing aureola"
-echo "################################################################"
-
-
-
-echo "################################################################"
-echo ""
-echo "################################################################"
 
 
 echo "################################################################"
