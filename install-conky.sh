@@ -208,6 +208,10 @@ fi
 echo "################################################################"
 echo "Checking dependancies"
 
+sudo apt-get install lsb-release
+sudo pacman -S lsb-release
+
+
 DISTRO=$(lsb_release -si)
 
 echo "################################################################"
@@ -286,6 +290,87 @@ case $DISTRO in
 
 		fi
 		;;
+
+
+	Arch)
+
+	# C O N K Y
+
+		# check if conky is installed
+		if ! location="$(type -p "conky")" || [ -z "conky" ]; then
+
+			echo "################################################################"
+			echo "installing conky for this script to work"
+			echo "################################################################"
+
+		  	sudo packer conky-lua-nv --noedit
+
+		  else
+		  	echo "Conky was installed. Proceeding..."
+		fi
+
+	# D M I D E C O D E
+
+
+		# The conky depends on dmidecode to know the motherboard and manufacturer
+		# check if dmidecode is installed
+
+		if ! location="$(type -p "dmidecode")" || [ -z "dmidecode" ]; then
+
+			echo "################################################################"
+			echo "installing dmidecode for this script to work"
+			echo "#################################################################"
+
+		  	sudo pacman -S dmidecode
+
+		  	#without this line dmidecode will not work - it needs sudo
+
+		  	sudo chmod u+s /usr/sbin/dmidecode
+
+		  else
+
+		  	echo "################################################################"
+		  	echo "Dmidecode was installed. Proceeding..."
+			echo "################################################################"
+			echo "Setting the user rights for dmidecode to be able to use it in conky"
+		  	sudo chmod u+s /usr/sbin/dmidecode
+
+		fi
+
+
+	# L M S E N S O R S
+
+
+		# The conky depends on lm-sensors to know the motherboard and manufacturer
+		# check if lm-sensors is installed
+
+		if ! location="$(type -p "sensors")" || [ -z "sensors" ]; then
+
+			echo "################################################################"
+			echo "installing lm-sensors for this script to work"
+			echo "#################################################################"
+
+		  	sudo pacman -S lm_sensors --noedit
+
+
+
+		  else
+		  	echo "lm-sensors was installed. Proceeding..."
+
+		fi
+		;;
+
+
+	*)
+		echo "No dependancies installed."
+		echo "No installation lines for your system."
+		;;
+esac
+
+
+
+
+
 
 	
 
