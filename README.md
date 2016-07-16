@@ -131,10 +131,52 @@ exit
 
 
 
-# FASE 3 erik
+# FASE 3 Personal login and xserver
 
 
 Login with new account i.e. here erik and password
+
+
+
+sudo pacman -S xorg-server xorg-server-utils xorg-xinit xorg-twm xterm
+startx
+
+sudo pacman -S xf86-video-nouveau
+
+
+
+
+
+# FASE 4 Destkop environment
+
+
+sudo pacman -S xfce4 xfce4-goodies xfce4-whiskermenu-plugin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 export EDITOR=nano
@@ -159,7 +201,3 @@ sudo nano /etc/pacman.conf
 
 
 via script
-
-
-sudo pacman -S xorg-server xorg-server-utils xorg-xinit xorg-twm xterm
-startx
