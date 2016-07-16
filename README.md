@@ -12,15 +12,19 @@ loadkeys be-latin1
 
 cfdisk /dev/sda
 
-sda1 	/ everything - 8GB primary bootable (asterisk!)
+delete all partitions
 
-sda2 		/swap	8 GB primary	
+sda1 	/ everything minus 8GB for swap making sure it is primary and bootable (asterisk!)
+
+sda2 		/swap	8 GB primary type swap (82)	
+
+write - yes -quit
 
 mkfs.ext4 /dev/sda1
 
-mkswap /dev/sda3
+mkswap /dev/sda2
 
-swapon /dev/sda3
+swapon /dev/sda2
 
 mount /dev/sda1 /mnt
 
