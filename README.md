@@ -218,6 +218,11 @@ printscreen
 
 scrot -e ~/Pictures/capt-$(date '+%Y-%m-%d-%H%M%S').png
 
+
+I use nemo to have an easy way to search graphical items
+
+sudo pacman -S nemo
+
 again this is personal ssssshhhh
 
 
