@@ -51,6 +51,7 @@ locale-gen
 
 echo LANG=en_US.UTF-8 > /etc/locale.conf
 
+
 export LANG=en_US.UTF-8
 
 nano /etc/vconsole.conf
@@ -77,6 +78,8 @@ nano /etc/hosts
 pacman -S networkmanager
 
 systemctl enable NetworkManager
+
+systemctl start NetworkManager
 
 mkinitcpio -p linux
 
@@ -105,8 +108,6 @@ reboot
 login with root
 and use the password
 
-make new account
-
 useradd -m -g users -G wheel,storage,power -s /bin/bash erik
 
 passwd erik
@@ -123,6 +124,12 @@ CTRL = X , yes and enter
 
 
 pacman -S bash-completion
+
+if no internet - again
+
+systemctl enable NetworkManager
+
+systemctl start NetworkManager
 
 exit
 
