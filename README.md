@@ -223,6 +223,33 @@ I use nemo to have an easy way to search graphical items
 
 sudo pacman -S nemo
 
+
+# Other desktop environments
+
+sudo pacman -S budgie-desktop
+
+sudo pacman -S cinnamon
+
+sudo pacman -S deepin
+
+sudo pacman -S deepin-extra
+
+sudo pacman -S enlightenment
+
+sudo pacman -S gnome gnome-extra
+
+sudo pacman -S gnome-flashback
+
+
+sudo pacman -S lxde-common lxsession openbox
+
+sudo pacman -S lxqt
+
+sudo pacman -S mate mate-extra
+
+
+
+
 again this is personal ssssshhhh
 
 
