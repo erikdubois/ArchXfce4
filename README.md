@@ -248,7 +248,7 @@ sudo pacman -S lxqt
 sudo pacman -S mate mate-extra
 
 
-
+gsettings set org.cinnamon.desktop.default-applications.terminal exec terminator
 
 again this is personal ssssshhhh
 
