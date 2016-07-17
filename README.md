@@ -236,13 +236,11 @@ sudo pacman -S nemo
 
 # Other desktop environments
 
-sudo pacman -S budgie-desktop
+sudo pacman -S budgie-desktop gnome
 
 sudo pacman -S cinnamon
 
-sudo pacman -S deepin
-
-sudo pacman -S deepin-extra
+sudo pacman -S deepin deepin-extra
 
 sudo pacman -S enlightenment
 
