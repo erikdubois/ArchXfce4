@@ -127,9 +127,11 @@ pacman -S bash-completion
 
 if no internet - again
 
-systemctl enable NetworkManager
+sudo systemctl enable NetworkManager
 
-systemctl start NetworkManager
+sudo systemctl start NetworkManager
+
+pacman -S terminator
 
 exit
 
