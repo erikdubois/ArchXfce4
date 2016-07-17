@@ -241,7 +241,7 @@ sudo pacman -S gnome gnome-extra
 sudo pacman -S gnome-flashback
 
 
-sudo pacman -S lxde-common lxsession openbox
+sudo pacman -S lxde-common lxsession openbox obconf
 
 sudo pacman -S lxqt
 
