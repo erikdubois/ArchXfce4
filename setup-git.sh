@@ -98,7 +98,7 @@ git config --global push.default simple
 
 
 
-git remote add origin https://github.com/erikdubois/ArchXfce4.git
+#git remote add origin https://github.com/erikdubois/ArchXfce4.git
 
 
 echo " ALL  D O N E !"
