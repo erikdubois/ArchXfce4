@@ -1,6 +1,14 @@
 # ArchXfce4
 
-psss.... Just for me.
+Installing notes for my personal use.
+
+
+Sardi v 7.2.9 at [Sourceforge](https://sourceforge.net/projects/sardi/files/)
+
+![Screenshots](http://i.imgur.com/CtFKkQC.jpg)
+
+
+
 
 # FASE 1
 
@@ -213,60 +221,8 @@ Go inside the folder and run every program in there
 
 run forest run
 
-Keyboard shortcuts to stop music and skip to next can be done with
-
-playerctl play-pause
-
-playerctl next
-
-playerctl previous
-
-playerctl stop
-
 
 printscreen
 
 scrot -e ~/Pictures/capt-$(date '+%Y-%m-%d-%H%M%S').png
-
-
-I use nemo to have an easy way to search graphical items
-
-sudo pacman -S nemo
-
-
-# Other desktop environments
-
-sudo pacman -S budgie-desktop gnome
-
-sudo pacman -S cinnamon
-
-sudo pacman -S deepin deepin-extra
-
-sudo pacman -S enlightenment
-
-sudo pacman -S gnome gnome-extra
-
-sudo pacman -S gnome-flashback
-
-
-sudo pacman -S lxde-common lxsession openbox obconf
-
-sudo pacman -S lxqt
-
-sudo pacman -S mate mate-extra
-
-
-gsettings set org.cinnamon.desktop.default-applications.terminal exec terminator
-
-again this is personal ssssshhhh
-
-
-
-
-
-
-
-
-
-
 
