@@ -62,7 +62,8 @@ locale-gen
 echo LANG=en_US.UTF-8 > /etc/locale.conf
 
 
-export LANG=en_US.UTF-8
+	OMIT  : export LANG=en_US.UTF-8
+
 
 nano /etc/vconsole.conf
 
@@ -83,15 +84,18 @@ nano /etc/hosts
 	<ip-address> <hostname.domain.org> <hostname>
 	127.0.0.1 localhost.localdomain localhost ArchErik
 	::1   localhost.localdomain localhost ArchErik
-	touch /etc/udev/rules.d/80-net-setup-link.rules
+
 
 pacman -S networkmanager
 
 systemctl enable NetworkManager
 
-systemctl start NetworkManager
 
-mkinitcpio -p linux
+
+	OMIT : systemctl start NetworkManager
+
+	OMIT : mkinitcpio -p linux
+
 
 passwd
 
