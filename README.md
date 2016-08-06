@@ -108,9 +108,12 @@ grub-install --target=i386-pc /dev/sda
 
 grub-mkconfig -o /boot/grub/grub.cfg
 
-umount /dev/sda1
 
 exit
+
+	CHANGED : umount /dev/sda1
+
+umount -R /mnt
 
 reboot
 
