@@ -101,7 +101,10 @@ passwd
 
 pacman -S grub os-prober
 
-grub-install --target=i386-pc --recheck /dev/sda
+	CHANGED : grub-install --target=i386-pc --recheck /dev/sda
+
+grub-install --target=i386-pc /dev/sda
+
 
 grub-mkconfig -o /boot/grub/grub.cfg
 
