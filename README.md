@@ -145,13 +145,12 @@ CTRL = X , yes and enter
 
 pacman -S bash-completion
 
-if no internet - again
+	if no internet - again
 
-sudo systemctl enable NetworkManager
+	sudo systemctl enable NetworkManager
 
-sudo systemctl start NetworkManager
+	sudo systemctl start NetworkManager
 
-pacman -S terminator
 
 exit
 
