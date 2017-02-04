@@ -1,4 +1,4 @@
-# ArchXfce
+# ArchXfce4
 
 A collection of scripts for a fast an easy installation of all software, icons, themes, cursors, ... automatically.
 
