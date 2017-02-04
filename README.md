@@ -1,264 +1,118 @@
-# ArchXfce4
+# ArchXfce
 
-Installing notes for my personal use.
+A collection of scripts for a fast an easy installation of all software, icons, themes, cursors, ... automatically.
 
 
-Sardi v 7.2.9 at [Sourceforge](https://sourceforge.net/projects/sardi/files/)
+I will be using the following elements : 
+
+
+Sardi icons at AUR and [Sourceforge](https://sourceforge.net/projects/sardi/files/)
+
+Surfn icons at AUR and [Github](https://github.com/erikdubois/Surfn)
+
+Aureola conky at [Github](https://github.com/erikdubois/aureola)
+
+Plank themes at [Github](https://github.com/erikdubois/plankthemes)
+
+More info can be found on http://erikdubois.be
+
+
+#Screenshots
+
 
 ![Screenshots](http://i.imgur.com/CtFKkQC.jpg)
 
 ![Screenshots](http://i.imgur.com/GCRovAU.jpg)
 
-![Screenshots](http://i.imgur.com/6sbaNWO.png)
 
+#Tutorials
 
-# FASE 1
 
-Steps to take when installing XFCE4 from scratch
+Installation of Arch Linux and consequently Budgie is documented on https://erikdubois.be
 
-Pop in the latest arch usb
 
-loadkeys be-latin1
+##1. Arch installation
 
-cfdisk /dev/sda
+Archlinux installation can be found in this article. It will be shown in VirtualBox in order to be able to make a tutorial. Remember to choose the proper graphical driver and not the virtual box driver when installing on a ssd or harddisk.
 
-delete all partitions
+http://erikdubois.be/how-to-install-arch-linux/
 
-sda1 	/ everything minus 8GB for swap making sure it is primary and bootable (asterisk!)
 
-sda2 		/swap	8 GB primary type swap (82)	
+##2. Desktop environment installation
 
-write - yes -quit
 
-mkfs.ext4 /dev/sda1
+Budgie installation on Arch Linux can be found on this article
 
-mkswap /dev/sda2
+http://erikdubois.be/how-to-install-budgie-on-arch-linux/
 
-swapon /dev/sda2
 
-mount /dev/sda1 /mnt
+#Remember
 
-pacman -Sy
 
+##Setting nano instead of vi
 
-pacstrap -i /mnt base base-devel
+	export VISUAL=nano
 
-genfstab -U /mnt >> /mnt/etc/fstab
+	export EDITOR=nano
 
-arch-chroot /mnt /bin/bash
 
-nano /etc/locale.gen
 
-uncomment these lines
 
-	be_BY.UTF8
-	en_GB.UTF8
-	en_US.UTF8
+# Youtube sources
 
-CTRL + X , yes, enter
+Arch Linux Budgie playlist
 
-locale-gen
+https://www.youtube.com/playlist?list=PLlloYVGq5pS61C4jS9shFV62B_HseEAJS
 
-echo LANG=en_US.UTF-8 > /etc/locale.conf
 
+Showing all sardi and surfn icons on Archlinux Budgie
 
-	OMIT  : export LANG=en_US.UTF-8
+https://www.youtube.com/watch?v=nrISx6JX258
 
 
-nano /etc/vconsole.conf
 
-	KEYMAP=be-latin1
-	FONT=lat9w-16
 
-CTRL + X , yes, enter
 
-ln -s /usr/share/zoneinfo/Europe/Brussels /etc/localtime
+# F  A  Q
+--------------------
 
-hwclock --systohc --utc
+#What can you do if the script does not execute?
 
-echo ArchErik > /etc/hostname
+Since I sometimes forget to make the script executable, I include here what you can do to solve that.
 
-nano /etc/hosts
+A script can only run when it is marked as an executable.
 
+	ls -al 
 
-	<ip-address> <hostname.domain.org> <hostname>
-	127.0.0.1 localhost.localdomain localhost ArchErik
-	::1   localhost.localdomain localhost ArchErik
+Above code will reveal if a script has an "x". X meaning executable.
+Google "chmod" and "execute" and you will find more info.
 
+For now if this happens, you should apply this code in the terminal and add the file name.
 
-pacman -S networkmanager
+	chmod +x typeyourfilename
 
-systemctl enable NetworkManager
+Then you can execute it by typing
 
+	./typeyourfilename
 
+Or you can follow these steps
 
-	OMIT : systemctl start NetworkManager
+![Screenshots](http://i.imgur.com/vXsOaFL.gif)
 
-	OMIT : mkinitcpio -p linux
 
+-------------------------------------------------
+#But that is the fun in Linux.
 
-passwd
+You can do whatever <b>Y O U</b> want.
 
-pacman -S grub os-prober
+Share the knowledge.
 
-	CHANGED : grub-install --target=i386-pc --recheck /dev/sda
+I share my knowledge at http://erikdubois.be
+------------------------------------------------
 
-grub-install --target=i386-pc /dev/sda
 
 
-grub-mkconfig -o /boot/grub/grub.cfg
 
 
-exit
 
-	CHANGED : umount /dev/sda1
 
-umount -R /mnt
-
-reboot
-
-
-
-
-
-
-
-#FASE 2 root
-
-login with root
-and use the password
-
-useradd -m -g users -G wheel,storage,power -s /bin/bash erik
-
-passwd erik
-
-EDITOR=nano visudo
-
-Look for these lines with an hashtag in front
-	
-	 %wheel ALL=(ALL) ALL
-
-hashtag (#) should be gone
-
-CTRL = X , yes and enter
-
-
-pacman -S bash-completion
-
-	if no internet - again
-
-	sudo systemctl enable NetworkManager
-
-	sudo systemctl start NetworkManager
-
-
-exit
-
-
-
-
-
-
-
-# FASE 3 Personal login and xserver
-
-
-Login with new account i.e. here erik and password
-
-
-
-sudo pacman -S xorg-server xorg-server-utils xorg-xinit xorg-twm xterm
-
-
-sudo pacman -S xf86-video-nouveau
-
-
-
-
-
-# FASE 4 Desktop environment
-
-
-sudo pacman -S xfce4 xfce4-goodies xfce4-whiskermenu-plugin
-
-
-# FASE 5 Display manager
-
-easy switching between desktop environments and login
-
-sudo pacman -S gdm
-
-systemctl enable gdm.service
-
-systemctl start gdm.service
-
-
-change your keyboard to belgian in the settings
-
-
-
-# Fase 5 Getting our software
-
-export EDITOR=nano
-
-
-sudo pacman -S firefox
-
-Surf to https://github.com/erikdubois/ArchXfce4
-
-If you download the zip
-
-	
-sudo pacman -S file-roller
-
-Download and right mouse click to extract
-
-If you work with git
-
-sudo pacman -S git
-
-git clone https://github.com/erikdubois/ArchXfce4
-
-
-Go inside the folder and run every program in there
-
-./1 and press tab etcetera
-
-
-./2 ...
-
-
-./3 ...
-
-run forest run
-
-
-printscreen
-
-scrot -e ~/Pictures/capt-$(date '+%Y-%m-%d-%H%M%S').png
-
-Spotify controls set up via keyboard shortcut
-
-playerctl
-
-Available Commands:
-  play                    Command the player to play
-
-  pause                   Command the player to pause
-
-  play-pause              Command the player to toggle between play/pause
-
-  stop                    Command the player to stop
-
-  next                    Command the player to skip to the next track
-
-  previous                Command the player to skip to the previous track
-
-  position [OFFSET][+/-]  Command the player to go to the position or seek forward/backward OFFSET in seconds
-
-  volume [LEVEL][+/-]     Print or set the volume to LEVEL from 0.0 to 1.0
-
-  status                  Get the play status of the player
-
-  metadata [KEY]          Print metadata information for the current track. Print only value of KEY if passed
-  
