@@ -46,17 +46,6 @@ This installation on Arch Linux can be found in this article
 http://erikdubois.be/how-to-install-xfce4-on-arch-linux/
 
 
-#Remember
-
-
-##Setting nano instead of vi
-
-	export VISUAL=nano
-
-	export EDITOR=nano
-
-
-
 
 # Youtube sources
 
